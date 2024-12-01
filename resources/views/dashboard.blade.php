@@ -143,7 +143,7 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active fw-semibold" aria-current="page" href="{{route('dashboard')}}">Accueil</a>
+          <a class="nav-link fw-semibold @if(request()->route()->getname()== 'dashboard')  active @endif " aria-current="page" href="{{route('dashboard')}}">Accueil</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active fw-semibold" href="#Témoignages">Témoignages</a>
@@ -251,3 +251,5 @@
 
 </body>
 </html>
+
+
